@@ -1,247 +1,206 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Winter Series 69F — Abu Dhabi 2025–2026</title>
-    <meta name="description" content="Одностраничная презентация серии регат 69F в Абу-Даби 2025–2026. Формат Owner-Driver, календарь, локация, контакты." />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Ctext y='1em' font-size='96'%3E%F0%9F%9A%A3%3C/text%3E%3C/svg%3E">
     <!-- Tailwind через CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- React + ReactDOM UMD -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <!-- Babel для JSX без сборки -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body class="bg-neutral-900 text-gray-100">
-    <div id="root"></div>
+    <!-- Контакты -->
+    <header class="absolute top-4 right-6 text-right text-sm space-y-1">
+      <p>
+        <a href="tel:+79671223577" class="text-cyan-400 hover:underline">
+          +7 967 122 35 77
+        </a>
+      </p>
+      <p>
+        <a
+          href="https://t.me/sysoev_pavel"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-cyan-400 hover:underline"
+        >
+          t.me/sysoev_pavel
+        </a>
+      </p>
+    </header>
 
-    <script type="text/babel">
-      const { useEffect, useState } = React;
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight space-y-2">
+            <div>Winter Series 69F</div>
+            <div>Abu Dhabi</div>
+            <div>2025–2026</div>
+          </h1>
+          <div class="mt-4 h-1 w-24 bg-cyan-500 rounded"></div>
+          <p class="mt-8 text-base opacity-90">
+            Формат <span class="font-semibold">Owner-Driver</span>
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <span
+              class="inline-flex items-center gap-2 rounded-2xl bg-gray-800 px-4 py-2 text-base"
+            >
+              👥 Экипаж 3–4 человека
+            </span>
+          </div>
+        </div>
+        <div class="relative">
+          <div
+            class="aspect-[16/10] w-full rounded-2xl bg-gray-800 ring-1 ring-gray-700 shadow-2xl"
+          >
+            <img
+              src="https://studiocasti.com/wp-content/uploads/2022/12/08-KevinRio_220809_DJI_0089.jpg"
+              alt="69F на фойле"
+              class="h-full w-full object-cover rounded-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
-      function App() {
-        return (
-          <main className="min-h-screen relative">
-            {/* Контакты в правом верхнем углу */}
-            <header className="absolute top-4 right-6 text-right text-sm space-y-1">
-              <p>
-                <a href="tel:+79671223577" className="text-cyan-400 hover:underline">
-                  +7 967 122 35 77
-                </a>
-              </p>
-              <p>
-                <a
-                  href="https://t.me/sysoev_pavel"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cyan-400 hover:underline"
-                >
-                  t.me/sysoev_pavel
-                </a>
-              </p>
-            </header>
+    <!-- Статус и формат -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 gap-8">
+        <div class="rounded-2xl bg-gray-800 p-8 ring-1 ring-gray-700">
+          <p class="text-xl font-bold">Статус флота</p>
+          <p class="mt-4 text-base opacity-90">
+            <span class="font-semibold">4 команды</span> уже планируют и
+            <span class="font-semibold">оплатили участие</span>. Ещё
+            <span class="font-semibold">2–3 команды из Европы</span> ждут финальных подтверждений.
+          </p>
+        </div>
+        <div class="rounded-2xl bg-gray-800 p-8 ring-1 ring-gray-700">
+          <p class="text-xl font-bold">Формат</p>
+          <ul class="mt-4 space-y-2 opacity-90 text-base">
+            <li>• Короткие динамичные гонки</li>
+            <li>• Флот одинаковых лодок 69F</li>
+            <li>• Тренировки + гоночные дни</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-            {/* Hero */}
-            <section className="relative overflow-hidden">
-              <div className="max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h1 className="text-4xl md:text-5xl font-extrabold leading-tight space-y-2">
-                    <div>Winter Series 69F</div>
-                    <div>Abu Dhabi</div>
-                    <div>2025–2026</div>
-                  </h1>
-                  <div className="mt-4 h-1 w-24 bg-cyan-500 rounded"></div>
-                  <p className="mt-8 text-base opacity-90">
-                    Формат <span className="font-semibold">Owner-Driver</span>
-                  </p>
-                  <div className="mt-8 flex flex-wrap gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-2xl bg-gray-800 px-4 py-2 text-base">
-                      👥 Экипаж 3–4 человека
-                    </span>
-                  </div>
-                </div>
-                <div className="relative">
-                  <div className="aspect-[16/10] w-full rounded-2xl bg-gray-800 ring-1 ring-gray-700 shadow-2xl">
-                    <img
-                      src="https://studiocasti.com/wp-content/uploads/2022/12/08-KevinRio_220809_DJI_0089.jpg"
-                      alt="69F на фойле"
-                      className="h-full w-full object-cover rounded-2xl"
-                    />
-                  </div>
-                </div>
-              </div>
-            </section>
+    <!-- Локация -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-xl font-bold">Локация — Абу-Даби</h2>
+        <div class="mt-2 h-1 w-16 bg-cyan-500 rounded"></div>
+        <p class="mt-4 text-base opacity-90">
+          Yas Marina —
+          <a
+            href="https://www.yasmarina.ae"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline text-cyan-400"
+            >www.yasmarina.ae</a
+          >
+        </p>
+        <div class="mt-8 grid lg:grid-cols-2 gap-8">
+          <div class="rounded-2xl overflow-hidden ring-1 ring-gray-700 bg-gray-800">
+            <img
+              src="https://www.everythingf1.com/wp-content/smush-webp/2024/12/yasmarinayasmarina.png.webp"
+              alt="Yas Marina Abu Dhabi"
+              class="w-full h-80 object-cover"
+            />
+            <div class="p-4 text-base">Yas Marina — база регаты</div>
+          </div>
+          <div class="rounded-2xl overflow-hidden ring-1 ring-gray-700 bg-gray-800">
+            <div class="relative w-full h-80">
+              <iframe
+                src="https://www.google.com/maps/d/embed?mid=1dOSNGg8jeqLjxnxVRvpjyteCyrAsQTI&hl=ru&ehbc=2E312F"
+                class="w-full h-full"
+                style="border: 0"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="p-4 text-base">Гоночная и тренировочная зона</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            {/* Статус + Формат */}
-            <section className="py-16">
-              <div className="max-w-6xl mx-auto px-6">
-                <div className="grid sm:grid-cols-2 gap-8">
-                  <div className="rounded-2xl bg-gray-800 p-8 ring-1 ring-gray-700">
-                    <p className="text-xl font-bold">Статус флота</p>
-                    <p className="mt-4 text-base opacity-90">
-                      <span className="font-semibold">4 команды</span> уже планируют и{" "}
-                      <span className="font-semibold">оплатили участие</span>. Ещё{" "}
-                      <span className="font-semibold">2–3 команды из Европы</span> ждут финальных подтверждений.
-                    </p>
-                  </div>
-                  <div className="rounded-2xl bg-gray-800 p-8 ring-1 ring-gray-700">
-                    <p className="text-xl font-bold">Формат</p>
-                    <ul className="mt-4 space-y-2 opacity-90 text-base">
-                      <li>• Короткие динамичные гонки</li>
-                      <li>• Флот одинаковых лодок 69F</li>
-                      <li>• Тренировки + гоночные дни</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
+    <!-- Календарь -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-xl font-bold">Календарь серии</h2>
+        <div class="mt-2 h-1 w-16 bg-cyan-500 rounded"></div>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="rounded-2xl bg-gray-800 p-6 ring-1 ring-gray-700 shadow">
+            <p class="text-base font-bold">1 этап</p>
+            <p class="text-base opacity-90">10–15 ноября 2025</p>
+            <p class="mt-2 text-sm uppercase tracking-wide opacity-80">Abu Dhabi</p>
+          </div>
+          <div class="rounded-2xl bg-gray-800 p-6 ring-1 ring-gray-700 shadow">
+            <p class="text-base font-bold">2 этап</p>
+            <p class="text-base opacity-90">15–20 января 2026</p>
+            <p class="mt-2 text-sm uppercase tracking-wide opacity-80">Abu Dhabi</p>
+          </div>
+          <div class="rounded-2xl bg-gray-800 p-6 ring-1 ring-gray-700 shadow">
+            <p class="text-base font-bold">3 этап</p>
+            <p class="text-base opacity-90">10–15 февраля 2026</p>
+            <p class="mt-2 text-sm uppercase tracking-wide opacity-80">Abu Dhabi</p>
+          </div>
+          <div class="rounded-2xl bg-gray-800 p-6 ring-1 ring-gray-700 shadow">
+            <p class="text-base font-bold">4 этап</p>
+            <p class="text-base opacity-90">15–20 марта 2026</p>
+            <p class="mt-2 text-sm uppercase tracking-wide opacity-80">Abu Dhabi</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            {/* Локация */}
-            <section className="py-16">
-              <div className="max-w-6xl mx-auto px-6">
-                <h2 className="text-xl font-bold">Локация — Абу-Даби</h2>
-                <div className="mt-2 h-1 w-16 bg-cyan-500 rounded"></div>
-                <p className="mt-4 text-base opacity-90">
-                  Yas Marina —{" "}
-                  <a
-                    href="https://www.yasmarina.ae"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline text-cyan-400"
-                  >
-                    www.yasmarina.ae
-                  </a>
-                </p>
-                <div className="mt-8 grid lg:grid-cols-2 gap-8">
-                  <div className="rounded-2xl overflow-hidden ring-1 ring-gray-700 bg-gray-800">
-                    <img
-                      src="https://www.everythingf1.com/wp-content/smush-webp/2024/12/yasmarinayasmarina.png.webp"
-                      alt="Yas Marina Abu Dhabi"
-                      className="w-full h-80 object-cover"
-                    />
-                    <div className="p-4 text-base">Yas Marina — база регаты</div>
-                  </div>
-                  <div className="rounded-2xl overflow-hidden ring-1 ring-gray-700 bg-gray-800">
-                    <div className="relative w-full h-80">
-                      <iframe
-                        src="https://www.google.com/maps/d/embed?mid=1dOSNGg8jeqLjxnxVRvpjyteCyrAsQTI&hl=ru&ehbc=2E312F"
-                        className="w-full h-full"
-                        style={{ border: 0 }}
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                    <div className="p-4 text-base">Гоночная и тренировочная зона</div>
-                  </div>
-                </div>
-              </div>
-            </section>
+    <!-- Факты -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-center">
+        <div class="rounded-2xl overflow-hidden ring-1 ring-gray-700 bg-gray-800">
+          <img
+            src="https://photos.smugmug.com/69F-MEDIA-CENTER/2024/GP3-ACQUAFRESCA/PHOTO/69F-CUP-2024-GP3-DAY-2/69F-CUP-2024-GP3-DAY-2-HIGH/i-53MBr8N/0/LhWmSt9DXhdQSVkt27SWvBDtWNgrb9pNMLjQMm86b/4K/69F%20GP3%2027-08-2024_Acquafresca%20Day-2_HIGH-150-4K.jpg"
+            alt="Динамика 69F"
+            class="w-full h-80 object-cover"
+          />
+        </div>
+        <ul class="text-base space-y-3">
+          <li>• Owner-Driver — вы за рулём</li>
+          <li>• Равные лодки — решают скиллы и слаженность</li>
+        </ul>
+      </div>
+    </section>
 
-            {/* Календарь */}
-            <section className="py-16">
-              <div className="max-w-6xl mx-auto px-6">
-                <h2 className="text-xl font-bold">Календарь серии</h2>
-                <div className="mt-2 h-1 w-16 bg-cyan-500 rounded"></div>
-                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {[
-                    { stage: "1 этап", date: "10–15 ноября 2025", place: "Abu Dhabi" },
-                    { stage: "2 этап", date: "15–20 января 2026", place: "Abu Dhabi" },
-                    { stage: "3 этап", date: "10–15 февраля 2026", place: "Abu Dhabi" },
-                    { stage: "4 этап", date: "15–20 марта 2026", place: "Abu Dhabi" },
-                  ].map((item) => (
-                    <div key={item.stage} data-testid="calendar-card" className="rounded-2xl bg-gray-800 p-6 ring-1 ring-gray-700 shadow">
-                      <p className="text-base font-bold">{item.stage}</p>
-                      <p className="text-base opacity-90">{item.date}</p>
-                      <p className="mt-2 text-sm uppercase tracking-wide opacity-80">{item.place}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            {/* Фото + факты */}
-            <section className="py-16">
-              <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-center">
-                <div className="rounded-2xl overflow-hidden ring-1 ring-gray-700 bg-gray-800">
-                  <img
-                    src="https://photos.smugmug.com/69F-MEDIA-CENTER/2024/GP3-ACQUAFRESCA/PHOTO/69F-CUP-2024-GP3-DAY-2/69F-CUP-2024-GP3-DAY-2-HIGH/i-53MBr8N/0/LhWmSt9DXhdQSVkt27SWvBDtWNgrb9pNMLjQMm86b/4K/69F%20GP3%2027-08-2024_Acquafresca%20Day-2_HIGH-150-4K.jpg"
-                    alt="Динамика 69F"
-                    className="w-full h-80 object-cover"
-                  />
-                </div>
-                <ul className="text-base space-y-3">
-                  <li>• Owner-Driver — вы за рулём</li>
-                  <li>• Равные лодки — решают скиллы и слаженность</li>
-                </ul>
-              </div>
-            </section>
-
-            {/* Контакты */}
-            <section className="py-20">
-              <div className="max-w-4xl mx-auto px-6 text-center">
-                <h2 className="text-xl font-bold">Контакты</h2>
-                <div className="mt-2 h-1 w-16 bg-cyan-500 rounded mx-auto"></div>
-                <p className="mt-6 text-base">
-                  <a href="tel:+79671223577" className="text-cyan-400 hover:underline">
-                    +7 967 122 35 77
-                  </a>
-                </p>
-                <p className="mt-3 text-base">
-                  <a href="https://t.me/sysoev_pavel" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
-                    t.me/sysoev_pavel
-                  </a>
-                </p>
-                <div className="mt-8 mx-auto max-w-xs rounded-2xl overflow-hidden ring-1 ring-gray-700 bg-white">
-                  <!-- Готовый QR (генерируется динамически) -->
-                  <img
-                    src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Ft.me%2Fsysoev_pavel"
-                    alt="QR Telegram"
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
-            </section>
-
-            <TestSuite />
-          </main>
-        );
-      }
-
-      // Небольшие «тесты», чтобы убедиться, что всё отрисовалось
-      function TestSuite() {
-        const [results, setResults] = useState([]);
-        useEffect(() => {
-          const checks = [];
-          checks.push({ name: "Yas Marina link", pass: !!document.querySelector('a[href="https://www.yasmarina.ae"]') });
-          checks.push({ name: "Telegram link", pass: !!document.querySelector('a[href^="https://t.me/sysoev_pavel"]') });
-          checks.push({ name: "Calendar has 4 items", pass: document.querySelectorAll('[data-testid="calendar-card"]').length === 4 });
-          checks.push({ name: "Inline map iframe", pass: !!document.querySelector('iframe[src*="google.com/maps"]') });
-          checks.push({ name: "Phone link exists", pass: !!document.querySelector('a[href^="tel:"]') });
-          checks.push({ name: "QR image exists", pass: !!document.querySelector('img[alt="QR Telegram"]') });
-          setResults(checks);
-        }, []);
-        const allPass = results.length > 0 && results.every((r) => r.pass);
-        return (
-          <details className="max-w-6xl mx-auto px-6 py-6 opacity-80">
-            <summary className="cursor-pointer select-none">Тесты (кликните, чтобы развернуть)</summary>
-            <ul className="mt-3 space-y-1 text-sm">
-              {results.map((r) => (
-                <li key={r.name} className={r.pass ? "text-emerald-400" : "text-red-400"}>
-                  {r.pass ? "✔" : "✖"} {r.name}
-                </li>
-              ))}
-              <li className={allPass ? "text-emerald-400" : "text-yellow-400"}>
-                Итог: {allPass ? "OK" : "Проверьте красные пункты выше"}
-              </li>
-            </ul>
-          </details>
-        );
-      }
-
-      const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render(<App />);
-    </script>
+    <!-- Контакты -->
+    <section class="py-20">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-xl font-bold">Контакты</h2>
+        <div class="mt-2 h-1 w-16 bg-cyan-500 rounded mx-auto"></div>
+        <p class="mt-6 text-base">
+          <a href="tel:+79671223577" class="text-cyan-400 hover:underline">
+            +7 967 122 35 77
+          </a>
+        </p>
+        <p class="mt-3 text-base">
+          <a
+            href="https://t.me/sysoev_pavel"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-cyan-400 hover:underline"
+          >
+            t.me/sysoev_pavel
+          </a>
+        </p>
+        <div
+          class="mt-8 mx-auto max-w-xs rounded-2xl overflow-hidden ring-1 ring-gray-700 bg-white"
+        >
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Ft.me%2Fsysoev_pavel"
+            alt="QR Telegram"
+            class="w-full h-auto"
+          />
+        </div>
+      </div>
+    </section>
   </body>
 </html>
